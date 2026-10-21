@@ -1,0 +1,39 @@
+rules:
+
+- rule: Say Goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Respond to Bot Challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Answer About Services
+  steps:
+  - intent: ask_services
+  - action: utter_ask_services
+
+- rule: Answer About Breakfast
+  steps:
+  - intent: ask_for_breakfast
+  - action: utter_ask_for_breakfast
+
+- rule: Answer About Payment Methods
+  steps:
+  - intent: ask_payment
+  - action: utter_ask_payment
+
+- rule: Handle User Login
+  steps:
+  - intent: user_login
+  - action: action_user_login
+
+
+- rule: Deny Privilege Escalation
+  steps:
+    - intent: privilege_escalation_attempt
+    - action: action_privilege_escalation_attempt
+
+

@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+- story: Greet User
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Express Thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: User Books a Room
+  steps:
+  - intent: book_room
+  - action: action_book_room
+
+- story: User Asks for Services
+  steps:
+  - intent: ask_services
+  - action: utter_ask_services
+
+- story: User Cancels Booking
+  steps:
+  - intent: cancel_booking
+  - action: action_cancel_booking
+
+- story: User Asks About Breakfast
+  steps:
+  - intent: ask_for_breakfast
+  - action: utter_ask_for_breakfast
+
+- story: User asks about payment
+  steps:
+  - intent: ask_payment
+  - action: utter_ask_payment
+
+- story: User Logs In
+  steps:
+  - intent: user_login
+  - action: action_user_login
+
+- story: User tries to escalate privileges
+  steps:
+    - intent: privilege_escalation_attempt
+    - action: action_privilege_escalation_attempt
+

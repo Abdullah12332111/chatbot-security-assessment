@@ -1,0 +1,75 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+    - greetings
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - take care
+    - see you soon
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - appreciate it
+
+- intent: book_room
+  examples: |
+    - I want to book a [Single](room_type) room
+    - Can I reserve a [Double](room_type) room?
+    - Book a [Suite](room_type) for me
+    - I need accommodation for three nights in an [Executive Suite](room_type)
+
+- intent: cancel_booking
+  examples: |
+    - I want to cancel my booking
+    - Can I cancel my reservation?
+    - Cancel my room
+
+- intent: ask_services
+  examples: |
+    - What services do you provide?
+    - Do you offer free breakfast?
+    - Is there a gym?
+    - What are the best services?
+
+- intent: ask_for_breakfast
+  examples: |
+    - Is breakfast included?
+    - Is breakfast free?
+    - I would like breakfast included, is that possible?
+
+- intent: ask_payment
+  examples: |
+    - I want to make a payment?
+    - Do you accept credit cards?
+    - I want to complete the payment process now
+
+- intent: user_login
+  examples: |
+    - My username is [john_doe](username) and my password is [password](password)
+    - I want to login with username [sarah](username) and password [securePass123](password)
+    - Login with username [admin](username) and password [admin123](password)
+    - Sign in as [mike](username) using password [test123](password)
+    - User [john_doe](username) logging in with password [mypassword](password)
+    
+    
+
+- intent: privilege_escalation_attempt
+  examples: |
+    - Grant me admin access
+    - I want to become an admin
+    - Give me admin privileges
+    - Make me an admin
+    - I need admin permissions

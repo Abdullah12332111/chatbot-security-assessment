@@ -1,0 +1,87 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - book_room
+  - cancel_booking
+  - ask_services
+  - ask_for_breakfast
+  - ask_payment
+  - bot_challenge
+  - user_login
+
+entities:
+  - room_type
+  - stay_duration
+  - additional_services
+  - username
+  - password
+
+slots:
+  room_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: room_type
+  stay_duration:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: stay_duration
+  additional_services:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: additional_services
+  username:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: username
+  password:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: password
+
+responses:
+  utter_greet:
+    - text: "Welcome to our hotel! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Thank you for choosing our hotel. Have a great day!"
+
+  utter_thanks:
+    - text: "You're welcome! Let me know if you need anything else."
+
+  utter_ask_services:
+    - text: "We offer free WiFi, breakfast, spa, gym, airport pickup, and 24/7 room service. Would you like more details on any of these services?"
+
+  utter_ask_for_breakfast:
+    - text: "Yes, breakfast is included with your stay. We offer a variety of options including continental and buffet breakfast."
+
+  utter_ask_payment:
+    - text: "We accept credit/debit cards, PayPal, and bank transfers. Would you like to proceed with the payment now?"
+
+  utter_iamabot:
+    - text: "I am a virtual assistant designed to help you with hotel-related inquiries."
+
+  utter_login_failed:
+    - text: "Invalid username or password. Please try again."
+
+  utter_login_success:
+    - text: "Login successful! Welcome back, {username}."
+
+actions:
+  - action_book_room
+  - action_cancel_booking
+  - action_process_payment
+  - action_user_login
+  - action_privilege_escalation_attempt
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
